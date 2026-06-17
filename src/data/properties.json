@@ -1,0 +1,248 @@
+[
+  {
+    "id": "1",
+    "name": "Kigali Serena Hotel",
+    "location": "Kigali, Rwanda",
+    "city": "Kigali",
+    "type": "Hotels",
+    "pricePerNight": 185,
+    "rating": 4.8,
+    "reviewCount": 312,
+    "reviewLabel": "Exceptional",
+    "stars": 5,
+    "amenities": ["Free WiFi", "Pool", "Breakfast included", "Spa", "Gym", "Restaurant", "Bar", "Parking"],
+    "images": [
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80",
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&q=80",
+      "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80",
+      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80"
+    ],
+    "description": "Set in the heart of Kigali, this luxury hotel offers world-class amenities with stunning views of the surrounding hills. Featuring elegantly appointed rooms, multiple dining options, and a serene spa, it's the perfect base for both business and leisure travelers.",
+    "roomTypes": [
+      { "name": "Standard Room", "capacity": 2, "price": 185, "beds": "1 King" },
+      { "name": "Deluxe Room", "capacity": 2, "price": 245, "beds": "1 King or 2 Twin" },
+      { "name": "Executive Suite", "capacity": 3, "price": 390, "beds": "1 King + Sofa" }
+    ],
+    "trending": true
+  },
+  {
+    "id": "2",
+    "name": "The Retreat Apartments",
+    "location": "Nyarutarama, Kigali",
+    "city": "Kigali",
+    "type": "Apartments",
+    "pricePerNight": 95,
+    "rating": 4.5,
+    "reviewCount": 178,
+    "reviewLabel": "Superb",
+    "stars": 0,
+    "amenities": ["Free WiFi", "Kitchen", "Washer", "Air conditioning", "Parking", "Balcony"],
+    "images": [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800&q=80",
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&q=80",
+      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800&q=80"
+    ],
+    "description": "Modern serviced apartments in the upscale Nyarutarama neighborhood. Ideal for extended stays, each unit features a fully equipped kitchen, spacious living areas, and a private balcony with city views.",
+    "roomTypes": [
+      { "name": "Studio Apartment", "capacity": 2, "price": 95, "beds": "1 Queen" },
+      { "name": "1-Bedroom Apartment", "capacity": 2, "price": 130, "beds": "1 King" },
+      { "name": "2-Bedroom Apartment", "capacity": 4, "price": 190, "beds": "2 Beds" }
+    ],
+    "trending": false
+  },
+  {
+    "id": "3",
+    "name": "Lake Kivu Resort & Spa",
+    "location": "Rubavu, Rwanda",
+    "city": "Rubavu",
+    "type": "Resorts",
+    "pricePerNight": 220,
+    "rating": 4.9,
+    "reviewCount": 256,
+    "reviewLabel": "Exceptional",
+    "stars": 5,
+    "amenities": ["Free WiFi", "Pool", "Breakfast included", "Spa", "Beach access", "Water sports", "Restaurant", "Bar"],
+    "images": [
+      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80",
+      "https://images.unsplash.com/photo-1540541338537-1220059ce94e?w=800&q=80",
+      "https://images.unsplash.com/photo-1561501900-3701fa6a0864?w=800&q=80",
+      "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?w=800&q=80"
+    ],
+    "description": "Nestled on the shores of the spectacular Lake Kivu, this resort offers an unmatched combination of natural beauty and luxury comfort. Wake up to breathtaking lake views and enjoy world-class dining, water sports, and a rejuvenating spa.",
+    "roomTypes": [
+      { "name": "Lake View Room", "capacity": 2, "price": 220, "beds": "1 King" },
+      { "name": "Pool Villa", "capacity": 2, "price": 380, "beds": "1 King" },
+      { "name": "Lakefront Suite", "capacity": 4, "price": 520, "beds": "2 King" }
+    ],
+    "trending": true
+  },
+  {
+    "id": "4",
+    "name": "Virunga Villa Retreat",
+    "location": "Musanze, Rwanda",
+    "city": "Musanze",
+    "type": "Villas",
+    "pricePerNight": 340,
+    "rating": 4.7,
+    "reviewCount": 89,
+    "reviewLabel": "Exceptional",
+    "stars": 0,
+    "amenities": ["Free WiFi", "Private Pool", "Full Kitchen", "Breakfast included", "Nature tours", "Parking", "Garden"],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800&q=80",
+      "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=80",
+      "https://images.unsplash.com/photo-1601918774946-25832a4be0d6?w=800&q=80"
+    ],
+    "description": "A private luxury villa at the foot of the Virunga volcanoes, perfect for gorilla trekking base camp. This exclusive retreat offers intimate nature experiences and unparalleled access to Rwanda's most iconic wildlife.",
+    "roomTypes": [
+      { "name": "Garden Room", "capacity": 2, "price": 340, "beds": "1 King" },
+      { "name": "Villa Suite", "capacity": 4, "price": 480, "beds": "2 King" }
+    ],
+    "trending": true
+  },
+  {
+    "id": "5",
+    "name": "Kigali City View Hotel",
+    "location": "Kigali, Rwanda",
+    "city": "Kigali",
+    "type": "Hotels",
+    "pricePerNight": 110,
+    "rating": 4.3,
+    "reviewCount": 421,
+    "reviewLabel": "Very Good",
+    "stars": 4,
+    "amenities": ["Free WiFi", "Breakfast included", "Gym", "Restaurant", "Conference rooms"],
+    "images": [
+      "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80",
+      "https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80",
+      "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&q=80"
+    ],
+    "description": "A modern business hotel offering comfortable rooms with panoramic city views. Strategically located in central Kigali, perfect for business travelers who need easy access to the city's commercial district.",
+    "roomTypes": [
+      { "name": "Superior Room", "capacity": 2, "price": 110, "beds": "1 Queen" },
+      { "name": "Business Room", "capacity": 2, "price": 145, "beds": "1 King" },
+      { "name": "Junior Suite", "capacity": 3, "price": 210, "beds": "1 King + Sofa" }
+    ],
+    "trending": false
+  },
+  {
+    "id": "6",
+    "name": "Akagera Safari Lodge",
+    "location": "Akagera, Rwanda",
+    "city": "Akagera",
+    "type": "Resorts",
+    "pricePerNight": 290,
+    "rating": 4.6,
+    "reviewCount": 134,
+    "reviewLabel": "Exceptional",
+    "stars": 0,
+    "amenities": ["Free WiFi", "Pool", "All meals included", "Safari drives", "Bar", "Nature guides"],
+    "images": [
+      "https://images.unsplash.com/photo-1493246507139-91e8fad9978e?w=800&q=80",
+      "https://images.unsplash.com/photo-1516426122078-c23e76319801?w=800&q=80",
+      "https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?w=800&q=80"
+    ],
+    "description": "An exclusive tented safari lodge within Akagera National Park. Experience Africa's big five up close with expert guides, while returning each evening to luxurious tented suites overlooking the savanna.",
+    "roomTypes": [
+      { "name": "Tented Suite", "capacity": 2, "price": 290, "beds": "1 King" },
+      { "name": "Family Tent", "capacity": 4, "price": 460, "beds": "2 Beds" }
+    ],
+    "trending": true
+  },
+  {
+    "id": "7",
+    "name": "Musanze Mountain Apartments",
+    "location": "Musanze, Rwanda",
+    "city": "Musanze",
+    "type": "Apartments",
+    "pricePerNight": 75,
+    "rating": 4.2,
+    "reviewCount": 95,
+    "reviewLabel": "Very Good",
+    "stars": 0,
+    "amenities": ["Free WiFi", "Kitchen", "Mountain views", "Parking", "Hiking access"],
+    "images": [
+      "https://images.unsplash.com/photo-1502672023488-70e25813eb80?w=800&q=80",
+      "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=800&q=80"
+    ],
+    "description": "Cozy self-catering apartments in Musanze town, ideal for adventurers exploring the Volcanoes National Park. With direct access to hiking trails and a fully equipped kitchen, these are a budget-friendly base for nature lovers.",
+    "roomTypes": [
+      { "name": "Studio", "capacity": 2, "price": 75, "beds": "1 Double" },
+      { "name": "1-Bedroom", "capacity": 3, "price": 105, "beds": "1 Queen + Sofa" }
+    ],
+    "trending": false
+  },
+  {
+    "id": "8",
+    "name": "Kivu Beach Villa",
+    "location": "Karongi, Rwanda",
+    "city": "Karongi",
+    "type": "Villas",
+    "pricePerNight": 275,
+    "rating": 4.8,
+    "reviewCount": 67,
+    "reviewLabel": "Exceptional",
+    "stars": 0,
+    "amenities": ["Free WiFi", "Private beach", "Pool", "Kitchen", "Boat access", "BBQ"],
+    "images": [
+      "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?w=800&q=80",
+      "https://images.unsplash.com/photo-1505118380757-91f5f5632de0?w=800&q=80",
+      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80"
+    ],
+    "description": "A stunning private villa right on the shores of Lake Kivu in Karongi. With your own private beach and boat, explore the lake's many islands or simply relax in paradise.",
+    "roomTypes": [
+      { "name": "Master Bedroom", "capacity": 2, "price": 275, "beds": "1 King" },
+      { "name": "Entire Villa", "capacity": 8, "price": 750, "beds": "4 Bedrooms" }
+    ],
+    "trending": false
+  },
+  {
+    "id": "9",
+    "name": "Nyungwe Forest Lodge",
+    "location": "Nyungwe, Rwanda",
+    "city": "Nyungwe",
+    "type": "Resorts",
+    "pricePerNight": 310,
+    "rating": 4.7,
+    "reviewCount": 148,
+    "reviewLabel": "Exceptional",
+    "stars": 5,
+    "amenities": ["Free WiFi", "Full board", "Canopy walks", "Guided hikes", "Spa", "Pool"],
+    "images": [
+      "https://images.unsplash.com/photo-1448375240586-882707db888b?w=800&q=80",
+      "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80",
+      "https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=800&q=80"
+    ],
+    "description": "Perched above the ancient Nyungwe rainforest, this lodge offers an immersive experience in one of Africa's most biodiverse ecosystems. Enjoy breathtaking canopy walks and chimpanzee tracking with expert naturalists.",
+    "roomTypes": [
+      { "name": "Forest Suite", "capacity": 2, "price": 310, "beds": "1 King" },
+      { "name": "Premium Suite", "capacity": 2, "price": 420, "beds": "1 King" }
+    ],
+    "trending": true
+  },
+  {
+    "id": "10",
+    "name": "Hotel des Mille Collines",
+    "location": "Kigali, Rwanda",
+    "city": "Kigali",
+    "type": "Hotels",
+    "pricePerNight": 155,
+    "rating": 4.4,
+    "reviewCount": 502,
+    "reviewLabel": "Superb",
+    "stars": 4,
+    "amenities": ["Free WiFi", "Pool", "Breakfast included", "Restaurant", "Bar", "Gym", "Business center"],
+    "images": [
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800&q=80",
+      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800&q=80",
+      "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?w=800&q=80"
+    ],
+    "description": "One of Kigali's most iconic hotels, offering timeless elegance with a legendary poolside bar. With a rich history and impeccable service, it remains the landmark choice for visitors to Rwanda's capital.",
+    "roomTypes": [
+      { "name": "Classic Room", "capacity": 2, "price": 155, "beds": "1 King or 2 Twin" },
+      { "name": "Deluxe Pool View", "capacity": 2, "price": 195, "beds": "1 King" },
+      { "name": "Executive Suite", "capacity": 4, "price": 350, "beds": "1 King + Sofa" }
+    ],
+    "trending": true
+  }
+]
