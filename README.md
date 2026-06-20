@@ -182,7 +182,3 @@ Vercel auto-detects this as a Vite project (build command `vite build`, output d
 - No real backend — all data is local JSON, so search/filter/sort happen client-side and nothing persists across reloads
 - Login/Signup are UI-only with no real authentication
 - Wishlist hearts are per-card local state and reset on page reload
-
-## Credits
-
-Built as part of an Advanced Front-End Program exercise cloning Booking.com's layout, UX flow, and visual language using React, Vite, Tailwind CSS, and React Router. All property data is fictional; images sourced from [Unsplash](https://unsplash.com).
