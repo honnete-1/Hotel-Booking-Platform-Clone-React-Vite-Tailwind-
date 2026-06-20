@@ -1,6 +1,10 @@
 # stayRW — Hotel Booking Platform
 
-A Booking.com–inspired hotel/accommodation booking web app built with **React + Vite + Tailwind CSS + React Router**. Properties are all located in Rwanda, using royalty-free images and an original brand ("stayRW").
+![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=white&labelColor=20232a) ![Vite](https://img.shields.io/badge/Vite-6-646CFF?logo=vite&logoColor=white) ![Tailwind](https://img.shields.io/badge/Tailwind_CSS-3-38B2AC?logo=tailwind-css&logoColor=white) ![React Router](https://img.shields.io/badge/React_Router-7-CA4245?logo=reactrouter&logoColor=white)
+
+stayRW is a Booking.com–inspired hotel and accommodation booking web app, recreating the structure, spacing system, and visual language of a real-world booking platform. Browse properties, filter and sort search results, view detailed property pages with galleries and room types, and book a stay — all from a clean, fully responsive interface.
+
+**Live Demo:** [https://hotel-booking-platform-clone-react-inky.vercel.app/](https://hotel-booking-platform-clone-react-inky.vercel.app/)
 
 ## Quick Start
 
@@ -20,9 +24,12 @@ src/
 │   │   └── Footer.jsx          # 4-column link footer
 │   ├── home/
 │   │   ├── Hero.jsx            # Hero banner + search bar
+│   │   ├── OffersBanner.jsx     # Getaway deals promo
+│   │   ├── TopProperties.jsx    # "Stay at our top unique properties"
 │   │   ├── PropertyTypeTabs.jsx
 │   │   ├── TrendingDestinations.jsx
-│   │   └── DealsSection.jsx
+│   │   ├── DealsSection.jsx     # "Deals for the weekend"
+│   │   └── HomesGuestsLove.jsx
 │   └── common/
 │       ├── SearchBar.jsx       # Full + compact variants
 │       └── PropertyCard.jsx    # Vertical + horizontal layouts
@@ -40,7 +47,7 @@ src/
 
 | Path | Page |
 |------|------|
-| `/` | Home — hero, tabs, trending grid, deals |
+| `/` | Home — hero, offers, top properties, browse by type, trending, deals, homes guests love |
 | `/search` | Search results — filters, sort, mobile drawer |
 | `/property/:id` | Property detail — gallery, rooms, booking widget |
 | `/login` | Sign in (UI only) |
@@ -59,14 +66,15 @@ src/
 - Tablet `640–1024px` — 2-col card grid
 - Desktop `>1024px` — multi-col, sticky sidebar
 
-## Deploy to Vercel
+## Deployment
 
-1. Push to GitHub
-2. Import at vercel.com
-3. Add `vercel.json`:
+Deployed on Vercel: **[hotel-booking-platform-clone-react-inky.vercel.app](https://hotel-booking-platform-clone-react-inky.vercel.app/)**
+
+The repo includes a `vercel.json` rewrite rule so client-side routes (`/property/:id`, `/search`, etc.) resolve correctly on refresh:
 ```json
 { "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }] }
 ```
+Every push to `main` triggers an automatic redeploy.
 
 ## Tech Stack
 
