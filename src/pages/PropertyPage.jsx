@@ -98,17 +98,19 @@ export default function PropertyPage() {
                   <div className="text-xs text-gray-500">{property.reviewLabel}</div>
                   <div className="text-xs text-gray-400">{property.reviewCount} reviews</div>
                 </div>
-                <span className="bg-primary text-white font-extrabold text-lg px-3 py-2 rounded-tl-xl rounded-tr-xl rounded-br-xl">
+                <span className="bg-primary text-white font-extrabold text-lg w-12 h-12 flex items-center justify-center rounded-tl-xl rounded-tr-xl rounded-bl-xl">
                   {property.rating}
                 </span>
               </div>
             </div>
           </div>
 
-          {/* Image Gallery */}
+          {/* Image Gallery — large hero tile shows the active image; clicking any
+              thumbnail swaps it in, matching the real Booking.com gallery behavior
+              rather than leaving the big tile static. */}
           <div className="grid grid-cols-4 grid-rows-2 gap-2 h-72 sm:h-96 mb-8 rounded-xl overflow-hidden">
-            <div className="col-span-4 sm:col-span-2 row-span-2 relative overflow-hidden cursor-pointer" onClick={() => setActiveImage(0)}>
-              <img src={property.images[0]} alt={property.name} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
+            <div className="col-span-4 sm:col-span-2 row-span-2 relative overflow-hidden cursor-pointer">
+              <img src={property.images[activeImage]} alt={property.name} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
             </div>
             {property.images.slice(1, 5).map((img, idx) => (
               <div key={idx} className="relative overflow-hidden cursor-pointer hidden sm:block" onClick={() => setActiveImage(idx + 1)}>
@@ -196,7 +198,7 @@ export default function PropertyPage() {
                 <div className="flex items-center gap-4 mb-6">
                   <h2 className="text-xl font-extrabold text-gray-900">Guest reviews</h2>
                   <div className="flex items-center gap-2">
-                    <span className="bg-primary text-white font-bold px-2.5 py-1.5 rounded-tl-lg rounded-tr-lg rounded-br-lg text-lg">
+                    <span className="bg-primary text-white font-bold w-11 h-11 flex items-center justify-center rounded-tl-lg rounded-tr-lg rounded-bl-lg text-lg">
                       {property.rating}
                     </span>
                     <div>

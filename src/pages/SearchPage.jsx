@@ -14,61 +14,39 @@ const SORT_OPTIONS = [
   { value: "rating", label: "Best rated" },
 ];
 
-export default function SearchPage() {
-  const [searchParams] = useSearchParams();
-  const destination = searchParams.get("destination") || "";
-  const initialType = searchParams.get("type") || "";
-
-  const [selectedTypes, setSelectedTypes] = useState(initialType ? [initialType] : []);
-  const [maxPrice, setMaxPrice] = useState(600);
-  const [minRating, setMinRating] = useState(0);
-  const [sortBy, setSortBy] = useState("recommended");
-  const [drawerOpen, setDrawerOpen] = useState(false);
-
-  function toggleType(type) {
-    setSelectedTypes((prev) =>
-      prev.includes(type) ? prev.filter((t) => t !== type) : [...prev, type]
-    );
-  }
-
-  const filtered = useMemo(() => {
-    let results = properties.filter((p) => {
-      const matchDest = !destination || p.location.toLowerCase().includes(destination.toLowerCase()) || p.city.toLowerCase().includes(destination.toLowerCase());
-      const matchType = selectedTypes.length === 0 || selectedTypes.includes(p.type);
-      const matchPrice = p.pricePerNight <= maxPrice;
-      const matchRating = p.rating >= minRating;
-      return matchDest && matchType && matchPrice && matchRating;
-    });
-
-    if (sortBy === "price_asc") results = [...results].sort((a, b) => a.pricePerNight - b.pricePerNight);
-    if (sortBy === "price_desc") results = [...results].sort((a, b) => b.pricePerNight - a.pricePerNight);
-    if (sortBy === "rating") results = [...results].sort((a, b) => b.rating - a.rating);
-
-    return results;
-  }, [destination, selectedTypes, maxPrice, minRating, sortBy]);
-
-  const Filters = () => (
-    <div className="space-y-6">
+// Extracted to a top-level component (rather than declared inside SearchPage)
+// so React treats it as a stable component type across renders. Defining a
+// component inline inside another component's body recreates its function
+// identity every render, which can cause inputs inside it to lose focus on
+// every keystroke. Passing state down as props keeps it correct and fast.
+function Filters({ selectedTypes, toggleType, maxPrice, setMaxPrice, minRating, setMinRating, onReset }) {
+  return (
+    <div className="divide-y divide-gray-200">
       {/* Property type */}
-      <div>
+      <div className="pb-5">
         <h3 className="font-bold text-gray-900 mb-3 text-sm">Property type</h3>
-        <div className="space-y-2">
+        <div className="space-y-2.5">
           {PROPERTY_TYPES.map((type) => (
-            <label key={type} className="flex items-center gap-2 cursor-pointer">
-              <input
-                type="checkbox"
-                checked={selectedTypes.includes(type)}
-                onChange={() => toggleType(type)}
-                className="w-4 h-4 accent-primary rounded"
-              />
-              <span className="text-sm text-gray-700">{type}</span>
+            <label key={type} className="flex items-center justify-between cursor-pointer group">
+              <span className="flex items-center gap-2">
+                <input
+                  type="checkbox"
+                  checked={selectedTypes.includes(type)}
+                  onChange={() => toggleType(type)}
+                  className="w-4 h-4 accent-primary rounded"
+                />
+                <span className="text-sm text-gray-700 group-hover:text-gray-900">{type}</span>
+              </span>
+              <span className="text-xs text-gray-400">
+                {properties.filter((p) => p.type === type).length}
+              </span>
             </label>
           ))}
         </div>
       </div>
 
       {/* Price */}
-      <div>
+      <div className="py-5">
         <h3 className="font-bold text-gray-900 mb-3 text-sm">Max price per night</h3>
         <input
           type="range"
@@ -86,9 +64,9 @@ export default function SearchPage() {
       </div>
 
       {/* Rating */}
-      <div>
+      <div className="py-5">
         <h3 className="font-bold text-gray-900 mb-3 text-sm">Minimum rating</h3>
-        <div className="space-y-2">
+        <div className="space-y-2.5">
           {[0, 4.0, 4.5, 4.7].map((r) => (
             <label key={r} className="flex items-center gap-2 cursor-pointer">
               <input
@@ -107,14 +85,58 @@ export default function SearchPage() {
       </div>
 
       {/* Reset */}
-      <button
-        onClick={() => { setSelectedTypes([]); setMaxPrice(600); setMinRating(0); }}
-        className="text-primary-light text-sm font-semibold hover:underline"
-      >
-        Reset all filters
-      </button>
+      <div className="pt-5">
+        <button
+          onClick={onReset}
+          className="text-primary-light text-sm font-semibold hover:underline"
+        >
+          Reset all filters
+        </button>
+      </div>
     </div>
   );
+}
+
+export default function SearchPage() {
+  const [searchParams] = useSearchParams();
+  const destination = searchParams.get("destination") || "";
+  const initialType = searchParams.get("type") || "";
+
+  const [selectedTypes, setSelectedTypes] = useState(initialType ? [initialType] : []);
+  const [maxPrice, setMaxPrice] = useState(600);
+  const [minRating, setMinRating] = useState(0);
+  const [sortBy, setSortBy] = useState("recommended");
+  const [drawerOpen, setDrawerOpen] = useState(false);
+
+  function toggleType(type) {
+    setSelectedTypes((prev) =>
+      prev.includes(type) ? prev.filter((t) => t !== type) : [...prev, type]
+    );
+  }
+
+  function resetFilters() {
+    setSelectedTypes([]);
+    setMaxPrice(600);
+    setMinRating(0);
+  }
+
+  const filtered = useMemo(() => {
+    let results = properties.filter((p) => {
+      const matchDest = !destination || p.location.toLowerCase().includes(destination.toLowerCase()) || p.city.toLowerCase().includes(destination.toLowerCase());
+      const matchType = selectedTypes.length === 0 || selectedTypes.includes(p.type);
+      const matchPrice = p.pricePerNight <= maxPrice;
+      const matchRating = p.rating >= minRating;
+      return matchDest && matchType && matchPrice && matchRating;
+    });
+
+    if (sortBy === "price_asc") results = [...results].sort((a, b) => a.pricePerNight - b.pricePerNight);
+    if (sortBy === "price_desc") results = [...results].sort((a, b) => b.pricePerNight - a.pricePerNight);
+    if (sortBy === "rating") results = [...results].sort((a, b) => b.rating - a.rating);
+
+    return results;
+  }, [destination, selectedTypes, maxPrice, minRating, sortBy]);
+
+  const filterProps = { selectedTypes, toggleType, maxPrice, setMaxPrice, minRating, setMinRating, onReset: resetFilters };
 
   return (
     <div className="min-h-screen flex flex-col bg-gray-50">
@@ -132,11 +154,11 @@ export default function SearchPage() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-6 flex-1 w-full">
         <div className="flex gap-6">
-          {/* Sidebar filters — desktop */}
+          {/* Sidebar filters - desktop */}
           <aside className="hidden lg:block w-64 flex-shrink-0">
             <div className="bg-white rounded-xl border border-gray-200 p-5 sticky top-24">
-              <h2 className="font-extrabold text-gray-900 mb-5">Filter results</h2>
-              <Filters />
+              <h2 className="font-extrabold text-gray-900 mb-5">Filter by</h2>
+              <Filters {...filterProps} />
             </div>
           </aside>
 
@@ -148,28 +170,36 @@ export default function SearchPage() {
                   {destination ? `${destination}: ` : ""}{filtered.length} properties found
                 </h1>
               </div>
-              <div className="flex items-center gap-3">
-                {/* Mobile filter toggle */}
+              {/* Mobile filter toggle */}
+              <button
+                onClick={() => setDrawerOpen(true)}
+                className="lg:hidden flex items-center gap-2 border border-gray-300 bg-white rounded-lg px-3 py-2 text-sm font-medium"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2a1 1 0 01-.293.707L13 13.414V19a1 1 0 01-.553.894l-4 2A1 1 0 017 21v-7.586L3.293 6.707A1 1 0 013 6V4z" />
+                </svg>
+                Filters
+              </button>
+            </div>
+
+            {/* Sort pills - Booking.com presents "Sort by" as a horizontal row
+                of selectable chips rather than a dropdown, so all options are
+                visible and comparable at a glance instead of hidden in a menu. */}
+            <div className="flex items-center gap-2 mb-5 overflow-x-auto pb-1 -mx-1 px-1">
+              <span className="text-sm text-gray-500 font-medium flex-shrink-0 mr-1">Sort by:</span>
+              {SORT_OPTIONS.map((o) => (
                 <button
-                  onClick={() => setDrawerOpen(true)}
-                  className="lg:hidden flex items-center gap-2 border border-gray-300 bg-white rounded-lg px-3 py-2 text-sm font-medium"
+                  key={o.value}
+                  onClick={() => setSortBy(o.value)}
+                  className={`flex-shrink-0 text-sm font-medium px-3.5 py-1.5 rounded-full border transition-colors ${
+                    sortBy === o.value
+                      ? "bg-primary text-white border-primary"
+                      : "bg-white text-gray-700 border-gray-300 hover:border-gray-400"
+                  }`}
                 >
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2a1 1 0 01-.293.707L13 13.414V19a1 1 0 01-.553.894l-4 2A1 1 0 017 21v-7.586L3.293 6.707A1 1 0 013 6V4z" />
-                  </svg>
-                  Filters
+                  {o.label}
                 </button>
-                {/* Sort */}
-                <select
-                  value={sortBy}
-                  onChange={(e) => setSortBy(e.target.value)}
-                  className="border border-gray-300 bg-white rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary-light"
-                >
-                  {SORT_OPTIONS.map((o) => (
-                    <option key={o.value} value={o.value}>{o.label}</option>
-                  ))}
-                </select>
-              </div>
+              ))}
             </div>
 
             {filtered.length === 0 ? (
@@ -202,7 +232,7 @@ export default function SearchPage() {
                 </svg>
               </button>
             </div>
-            <Filters />
+            <Filters {...filterProps} />
             <button
               onClick={() => setDrawerOpen(false)}
               className="mt-6 w-full bg-primary text-white font-bold py-3 rounded-lg"

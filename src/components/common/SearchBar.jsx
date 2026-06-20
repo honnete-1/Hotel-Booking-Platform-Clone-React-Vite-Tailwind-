@@ -20,7 +20,7 @@ export default function SearchBar({ compact = false, initialValues = {} }) {
 
   const inputClass = compact
     ? "w-full bg-white border border-gray-300 rounded px-3 py-2 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-primary-light"
-    : "w-full bg-white border-0 px-4 py-3 text-sm text-gray-800 focus:outline-none";
+    : "w-full bg-white border-0 px-4 py-3 text-sm text-gray-800 focus:outline-none placeholder:text-gray-400";
 
   if (compact) {
     return (
@@ -57,69 +57,70 @@ export default function SearchBar({ compact = false, initialValues = {} }) {
   }
 
   return (
-    <form onSubmit={handleSearch} className="bg-accent p-1.5 rounded-lg flex flex-col lg:flex-row gap-1.5">
+    <form
+      onSubmit={handleSearch}
+      className="bg-white border-[3px] border-accent rounded-lg flex flex-col lg:flex-row shadow-xl overflow-hidden"
+    >
       {/* Destination */}
-      <div className="flex-1 bg-white rounded flex items-center gap-2 px-1">
-        <svg className="w-5 h-5 text-gray-400 ml-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+      <div className="flex-1 flex items-center gap-2 px-3 py-3 border-b lg:border-b-0 lg:border-r border-gray-200">
+        <svg className="w-5 h-5 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 7a2 2 0 012-2h14a2 2 0 012 2v9H3V7z" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 19h18M7 11a2 2 0 11-4 0 2 2 0 014 0z" />
         </svg>
         <input
           type="text"
           placeholder="Where are you going?"
           value={destination}
           onChange={(e) => setDestination(e.target.value)}
-          className={inputClass}
+          className="w-full border-0 text-sm text-gray-800 focus:outline-none placeholder:text-gray-500"
         />
       </div>
 
-      {/* Check-in */}
-      <div className="bg-white rounded flex items-center gap-2 px-1 lg:w-44">
-        <svg className="w-5 h-5 text-gray-400 ml-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      {/* Check-in — Check-out, rendered as one field like the reference's
+          single "Check-in date — Check-out date" control. */}
+      <div className="flex-1 flex items-center gap-2 px-3 py-3 border-b lg:border-b-0 lg:border-r border-gray-200 lg:min-w-[260px]">
+        <svg className="w-5 h-5 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
         </svg>
-        <input
-          type="date"
-          value={checkIn}
-          onChange={(e) => setCheckIn(e.target.value)}
-          placeholder="Check-in"
-          className={inputClass}
-        />
+        <div className="flex items-center gap-2 w-full text-sm">
+          <input
+            type="date"
+            value={checkIn}
+            onChange={(e) => setCheckIn(e.target.value)}
+            className="border-0 text-gray-800 focus:outline-none w-full"
+          />
+          <span className="text-gray-400">—</span>
+          <input
+            type="date"
+            value={checkOut}
+            onChange={(e) => setCheckOut(e.target.value)}
+            className="border-0 text-gray-800 focus:outline-none w-full"
+          />
+        </div>
       </div>
 
-      {/* Check-out */}
-      <div className="bg-white rounded flex items-center gap-2 px-1 lg:w-44">
-        <svg className="w-5 h-5 text-gray-400 ml-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-        </svg>
-        <input
-          type="date"
-          value={checkOut}
-          onChange={(e) => setCheckOut(e.target.value)}
-          placeholder="Check-out"
-          className={inputClass}
-        />
-      </div>
-
-      {/* Guests */}
-      <div className="bg-white rounded flex items-center gap-2 px-1 lg:w-36">
-        <svg className="w-5 h-5 text-gray-400 ml-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      {/* Guests — single summary field like "2 adults · 0 children · 1 room" */}
+      <div className="flex-1 flex items-center gap-2 px-3 py-3 lg:min-w-[220px]">
+        <svg className="w-5 h-5 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
         </svg>
         <select
           value={guests}
           onChange={(e) => setGuests(e.target.value)}
-          className={inputClass}
+          className="w-full border-0 text-sm text-gray-800 focus:outline-none bg-transparent"
         >
           {[1, 2, 3, 4, 5, 6].map((n) => (
-            <option key={n} value={n}>{n} {n === 1 ? "adult" : "adults"}</option>
+            <option key={n} value={n}>{n} {n === 1 ? "adult" : "adults"} · 0 children · 1 room</option>
           ))}
         </select>
+        <svg className="w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+        </svg>
       </div>
 
       <button
         type="submit"
-        className="bg-primary-light hover:bg-primary text-white font-bold px-8 py-3 rounded text-sm transition-colors"
+        className="bg-primary-light hover:bg-primary text-white font-bold px-8 py-3 m-1.5 rounded text-base transition-colors"
       >
         Search
       </button>

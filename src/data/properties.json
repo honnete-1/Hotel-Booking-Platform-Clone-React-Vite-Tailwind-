@@ -10,7 +10,16 @@
     "reviewCount": 312,
     "reviewLabel": "Exceptional",
     "stars": 5,
-    "amenities": ["Free WiFi", "Pool", "Breakfast included", "Spa", "Gym", "Restaurant", "Bar", "Parking"],
+    "amenities": [
+      "Free WiFi",
+      "Pool",
+      "Breakfast included",
+      "Spa",
+      "Gym",
+      "Restaurant",
+      "Bar",
+      "Parking"
+    ],
     "images": [
       "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80",
       "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&q=80",
@@ -19,11 +28,27 @@
     ],
     "description": "Set in the heart of Kigali, this luxury hotel offers world-class amenities with stunning views of the surrounding hills. Featuring elegantly appointed rooms, multiple dining options, and a serene spa, it's the perfect base for both business and leisure travelers.",
     "roomTypes": [
-      { "name": "Standard Room", "capacity": 2, "price": 185, "beds": "1 King" },
-      { "name": "Deluxe Room", "capacity": 2, "price": 245, "beds": "1 King or 2 Twin" },
-      { "name": "Executive Suite", "capacity": 3, "price": 390, "beds": "1 King + Sofa" }
+      {
+        "name": "Standard Room",
+        "capacity": 2,
+        "price": 185,
+        "beds": "1 King"
+      },
+      {
+        "name": "Deluxe Room",
+        "capacity": 2,
+        "price": 245,
+        "beds": "1 King or 2 Twin"
+      },
+      {
+        "name": "Executive Suite",
+        "capacity": 3,
+        "price": 390,
+        "beds": "1 King + Sofa"
+      }
     ],
-    "trending": true
+    "trending": true,
+    "genius": true
   },
   {
     "id": "2",
@@ -36,7 +61,14 @@
     "reviewCount": 178,
     "reviewLabel": "Superb",
     "stars": 0,
-    "amenities": ["Free WiFi", "Kitchen", "Washer", "Air conditioning", "Parking", "Balcony"],
+    "amenities": [
+      "Free WiFi",
+      "Kitchen",
+      "Washer",
+      "Air conditioning",
+      "Parking",
+      "Balcony"
+    ],
     "images": [
       "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800&q=80",
       "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&q=80",
@@ -44,11 +76,27 @@
     ],
     "description": "Modern serviced apartments in the upscale Nyarutarama neighborhood. Ideal for extended stays, each unit features a fully equipped kitchen, spacious living areas, and a private balcony with city views.",
     "roomTypes": [
-      { "name": "Studio Apartment", "capacity": 2, "price": 95, "beds": "1 Queen" },
-      { "name": "1-Bedroom Apartment", "capacity": 2, "price": 130, "beds": "1 King" },
-      { "name": "2-Bedroom Apartment", "capacity": 4, "price": 190, "beds": "2 Beds" }
+      {
+        "name": "Studio Apartment",
+        "capacity": 2,
+        "price": 95,
+        "beds": "1 Queen"
+      },
+      {
+        "name": "1-Bedroom Apartment",
+        "capacity": 2,
+        "price": 130,
+        "beds": "1 King"
+      },
+      {
+        "name": "2-Bedroom Apartment",
+        "capacity": 4,
+        "price": 190,
+        "beds": "2 Beds"
+      }
     ],
-    "trending": false
+    "trending": false,
+    "originalPrice": 112
   },
   {
     "id": "3",
@@ -61,7 +109,16 @@
     "reviewCount": 256,
     "reviewLabel": "Exceptional",
     "stars": 5,
-    "amenities": ["Free WiFi", "Pool", "Breakfast included", "Spa", "Beach access", "Water sports", "Restaurant", "Bar"],
+    "amenities": [
+      "Free WiFi",
+      "Pool",
+      "Breakfast included",
+      "Spa",
+      "Beach access",
+      "Water sports",
+      "Restaurant",
+      "Bar"
+    ],
     "images": [
       "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80",
       "https://images.unsplash.com/photo-1540541338537-1220059ce94e?w=800&q=80",
@@ -70,9 +127,24 @@
     ],
     "description": "Nestled on the shores of the spectacular Lake Kivu, this resort offers an unmatched combination of natural beauty and luxury comfort. Wake up to breathtaking lake views and enjoy world-class dining, water sports, and a rejuvenating spa.",
     "roomTypes": [
-      { "name": "Lake View Room", "capacity": 2, "price": 220, "beds": "1 King" },
-      { "name": "Pool Villa", "capacity": 2, "price": 380, "beds": "1 King" },
-      { "name": "Lakefront Suite", "capacity": 4, "price": 520, "beds": "2 King" }
+      {
+        "name": "Lake View Room",
+        "capacity": 2,
+        "price": 220,
+        "beds": "1 King"
+      },
+      {
+        "name": "Pool Villa",
+        "capacity": 2,
+        "price": 380,
+        "beds": "1 King"
+      },
+      {
+        "name": "Lakefront Suite",
+        "capacity": 4,
+        "price": 520,
+        "beds": "2 King"
+      }
     ],
     "trending": true
   },
@@ -87,7 +159,15 @@
     "reviewCount": 89,
     "reviewLabel": "Exceptional",
     "stars": 0,
-    "amenities": ["Free WiFi", "Private Pool", "Full Kitchen", "Breakfast included", "Nature tours", "Parking", "Garden"],
+    "amenities": [
+      "Free WiFi",
+      "Private Pool",
+      "Full Kitchen",
+      "Breakfast included",
+      "Nature tours",
+      "Parking",
+      "Garden"
+    ],
     "images": [
       "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800&q=80",
       "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=80",
@@ -95,10 +175,21 @@
     ],
     "description": "A private luxury villa at the foot of the Virunga volcanoes, perfect for gorilla trekking base camp. This exclusive retreat offers intimate nature experiences and unparalleled access to Rwanda's most iconic wildlife.",
     "roomTypes": [
-      { "name": "Garden Room", "capacity": 2, "price": 340, "beds": "1 King" },
-      { "name": "Villa Suite", "capacity": 4, "price": 480, "beds": "2 King" }
+      {
+        "name": "Garden Room",
+        "capacity": 2,
+        "price": 340,
+        "beds": "1 King"
+      },
+      {
+        "name": "Villa Suite",
+        "capacity": 4,
+        "price": 480,
+        "beds": "2 King"
+      }
     ],
-    "trending": true
+    "trending": true,
+    "genius": true
   },
   {
     "id": "5",
@@ -111,7 +202,13 @@
     "reviewCount": 421,
     "reviewLabel": "Very Good",
     "stars": 4,
-    "amenities": ["Free WiFi", "Breakfast included", "Gym", "Restaurant", "Conference rooms"],
+    "amenities": [
+      "Free WiFi",
+      "Breakfast included",
+      "Gym",
+      "Restaurant",
+      "Conference rooms"
+    ],
     "images": [
       "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80",
       "https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80",
@@ -119,9 +216,24 @@
     ],
     "description": "A modern business hotel offering comfortable rooms with panoramic city views. Strategically located in central Kigali, perfect for business travelers who need easy access to the city's commercial district.",
     "roomTypes": [
-      { "name": "Superior Room", "capacity": 2, "price": 110, "beds": "1 Queen" },
-      { "name": "Business Room", "capacity": 2, "price": 145, "beds": "1 King" },
-      { "name": "Junior Suite", "capacity": 3, "price": 210, "beds": "1 King + Sofa" }
+      {
+        "name": "Superior Room",
+        "capacity": 2,
+        "price": 110,
+        "beds": "1 Queen"
+      },
+      {
+        "name": "Business Room",
+        "capacity": 2,
+        "price": 145,
+        "beds": "1 King"
+      },
+      {
+        "name": "Junior Suite",
+        "capacity": 3,
+        "price": 210,
+        "beds": "1 King + Sofa"
+      }
     ],
     "trending": false
   },
@@ -136,7 +248,14 @@
     "reviewCount": 134,
     "reviewLabel": "Exceptional",
     "stars": 0,
-    "amenities": ["Free WiFi", "Pool", "All meals included", "Safari drives", "Bar", "Nature guides"],
+    "amenities": [
+      "Free WiFi",
+      "Pool",
+      "All meals included",
+      "Safari drives",
+      "Bar",
+      "Nature guides"
+    ],
     "images": [
       "https://images.unsplash.com/photo-1493246507139-91e8fad9978e?w=800&q=80",
       "https://images.unsplash.com/photo-1516426122078-c23e76319801?w=800&q=80",
@@ -144,10 +263,21 @@
     ],
     "description": "An exclusive tented safari lodge within Akagera National Park. Experience Africa's big five up close with expert guides, while returning each evening to luxurious tented suites overlooking the savanna.",
     "roomTypes": [
-      { "name": "Tented Suite", "capacity": 2, "price": 290, "beds": "1 King" },
-      { "name": "Family Tent", "capacity": 4, "price": 460, "beds": "2 Beds" }
+      {
+        "name": "Tented Suite",
+        "capacity": 2,
+        "price": 290,
+        "beds": "1 King"
+      },
+      {
+        "name": "Family Tent",
+        "capacity": 4,
+        "price": 460,
+        "beds": "2 Beds"
+      }
     ],
-    "trending": true
+    "trending": true,
+    "originalPrice": 342
   },
   {
     "id": "7",
@@ -160,17 +290,34 @@
     "reviewCount": 95,
     "reviewLabel": "Very Good",
     "stars": 0,
-    "amenities": ["Free WiFi", "Kitchen", "Mountain views", "Parking", "Hiking access"],
+    "amenities": [
+      "Free WiFi",
+      "Kitchen",
+      "Mountain views",
+      "Parking",
+      "Hiking access"
+    ],
     "images": [
       "https://images.unsplash.com/photo-1502672023488-70e25813eb80?w=800&q=80",
       "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=800&q=80"
     ],
     "description": "Cozy self-catering apartments in Musanze town, ideal for adventurers exploring the Volcanoes National Park. With direct access to hiking trails and a fully equipped kitchen, these are a budget-friendly base for nature lovers.",
     "roomTypes": [
-      { "name": "Studio", "capacity": 2, "price": 75, "beds": "1 Double" },
-      { "name": "1-Bedroom", "capacity": 3, "price": 105, "beds": "1 Queen + Sofa" }
+      {
+        "name": "Studio",
+        "capacity": 2,
+        "price": 75,
+        "beds": "1 Double"
+      },
+      {
+        "name": "1-Bedroom",
+        "capacity": 3,
+        "price": 105,
+        "beds": "1 Queen + Sofa"
+      }
     ],
-    "trending": false
+    "trending": false,
+    "genius": true
   },
   {
     "id": "8",
@@ -183,7 +330,14 @@
     "reviewCount": 67,
     "reviewLabel": "Exceptional",
     "stars": 0,
-    "amenities": ["Free WiFi", "Private beach", "Pool", "Kitchen", "Boat access", "BBQ"],
+    "amenities": [
+      "Free WiFi",
+      "Private beach",
+      "Pool",
+      "Kitchen",
+      "Boat access",
+      "BBQ"
+    ],
     "images": [
       "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?w=800&q=80",
       "https://images.unsplash.com/photo-1505118380757-91f5f5632de0?w=800&q=80",
@@ -191,8 +345,18 @@
     ],
     "description": "A stunning private villa right on the shores of Lake Kivu in Karongi. With your own private beach and boat, explore the lake's many islands or simply relax in paradise.",
     "roomTypes": [
-      { "name": "Master Bedroom", "capacity": 2, "price": 275, "beds": "1 King" },
-      { "name": "Entire Villa", "capacity": 8, "price": 750, "beds": "4 Bedrooms" }
+      {
+        "name": "Master Bedroom",
+        "capacity": 2,
+        "price": 275,
+        "beds": "1 King"
+      },
+      {
+        "name": "Entire Villa",
+        "capacity": 8,
+        "price": 750,
+        "beds": "4 Bedrooms"
+      }
     ],
     "trending": false
   },
@@ -207,7 +371,14 @@
     "reviewCount": 148,
     "reviewLabel": "Exceptional",
     "stars": 5,
-    "amenities": ["Free WiFi", "Full board", "Canopy walks", "Guided hikes", "Spa", "Pool"],
+    "amenities": [
+      "Free WiFi",
+      "Full board",
+      "Canopy walks",
+      "Guided hikes",
+      "Spa",
+      "Pool"
+    ],
     "images": [
       "https://images.unsplash.com/photo-1448375240586-882707db888b?w=800&q=80",
       "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80",
@@ -215,8 +386,18 @@
     ],
     "description": "Perched above the ancient Nyungwe rainforest, this lodge offers an immersive experience in one of Africa's most biodiverse ecosystems. Enjoy breathtaking canopy walks and chimpanzee tracking with expert naturalists.",
     "roomTypes": [
-      { "name": "Forest Suite", "capacity": 2, "price": 310, "beds": "1 King" },
-      { "name": "Premium Suite", "capacity": 2, "price": 420, "beds": "1 King" }
+      {
+        "name": "Forest Suite",
+        "capacity": 2,
+        "price": 310,
+        "beds": "1 King"
+      },
+      {
+        "name": "Premium Suite",
+        "capacity": 2,
+        "price": 420,
+        "beds": "1 King"
+      }
     ],
     "trending": true
   },
@@ -231,7 +412,15 @@
     "reviewCount": 502,
     "reviewLabel": "Superb",
     "stars": 4,
-    "amenities": ["Free WiFi", "Pool", "Breakfast included", "Restaurant", "Bar", "Gym", "Business center"],
+    "amenities": [
+      "Free WiFi",
+      "Pool",
+      "Breakfast included",
+      "Restaurant",
+      "Bar",
+      "Gym",
+      "Business center"
+    ],
     "images": [
       "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800&q=80",
       "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800&q=80",
@@ -239,10 +428,27 @@
     ],
     "description": "One of Kigali's most iconic hotels, offering timeless elegance with a legendary poolside bar. With a rich history and impeccable service, it remains the landmark choice for visitors to Rwanda's capital.",
     "roomTypes": [
-      { "name": "Classic Room", "capacity": 2, "price": 155, "beds": "1 King or 2 Twin" },
-      { "name": "Deluxe Pool View", "capacity": 2, "price": 195, "beds": "1 King" },
-      { "name": "Executive Suite", "capacity": 4, "price": 350, "beds": "1 King + Sofa" }
+      {
+        "name": "Classic Room",
+        "capacity": 2,
+        "price": 155,
+        "beds": "1 King or 2 Twin"
+      },
+      {
+        "name": "Deluxe Pool View",
+        "capacity": 2,
+        "price": 195,
+        "beds": "1 King"
+      },
+      {
+        "name": "Executive Suite",
+        "capacity": 4,
+        "price": 350,
+        "beds": "1 King + Sofa"
+      }
     ],
-    "trending": true
+    "trending": true,
+    "genius": true,
+    "originalPrice": 183
   }
 ]

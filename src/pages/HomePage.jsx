@@ -1,9 +1,12 @@
 import Header from "../components/layout/Header";
 import Footer from "../components/layout/Footer";
 import Hero from "../components/home/Hero";
+import OffersBanner from "../components/home/OffersBanner";
+import TopProperties from "../components/home/TopProperties";
 import PropertyTypeTabs from "../components/home/PropertyTypeTabs";
 import TrendingDestinations from "../components/home/TrendingDestinations";
 import DealsSection from "../components/home/DealsSection";
+import HomesGuestsLove from "../components/home/HomesGuestsLove";
 
 export default function HomePage() {
   return (
@@ -11,9 +14,12 @@ export default function HomePage() {
       <Header />
       <main className="flex-1">
         <Hero />
+        <OffersBanner />
+        <TopProperties />
         <PropertyTypeTabs />
         <TrendingDestinations />
         <DealsSection />
+        <HomesGuestsLove />
 
         {/* Why stayRW section */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 py-12">
